@@ -1,13 +1,17 @@
 import React from 'react';
-import { Text, SafeAreaView, StatusBar, View, Animated, Dimensions, Button } from 'react-native';
+import { Text, Pressable, View, Animated, Dimensions, Image } from 'react-native';
+import { StartButton } from '../Button/StartButton/StartButton';
 import style from './style';
-import ButtonStart from '../Button/ButtonStart/ButtonStart';
 
 const {height, width} = Dimensions.get('window');
 
-export default function Welcome(){
+export default function Welcome({ navigation }){
+
   return <View style={style.container}>
-        <StatusBar backgroundColor="#6DD47E"/>
+            <Image
+            style={style.image}
+            source={require('../../../assets/logoP.png')}
+            />
             <Animated.View style={{
               backgroundColor:'#6DD47E',
               height: 500 + height,
@@ -17,11 +21,11 @@ export default function Welcome(){
               alignSelf: 'center',
               top: 0.45 * height,
             }}>
-              <Text style={style.textTitle}>Pergunta a Amigos</Text>
+              <Text style={style.textTitle}>Pergunta à Amigos</Text>
               </Animated.View>
             <Animated.View style={{
               backgroundColor: '#6DD47E',
-              height: height * 0.45,
+              height: height * 0.35,
               width: width,
               position: "absolute",
               bottom: 0,
@@ -30,7 +34,22 @@ export default function Welcome(){
             }}>
             <Text style={style.textSubTitle}>Junte os amigos e se preparem para as perguntas!</Text>
             <View style={style.box4}>
-              <ButtonStart/>
+              <Pressable 
+              style={({ pressed }) => [
+                {
+                  backgroundColor: pressed
+                    ? 'white'
+                    : '#FFD55A',
+                },
+                style.buttonStart,
+              ]}
+              onPress={() =>
+                navigation.navigate('QuestionsCategories')}
+              >
+                <Text style={style.textButtonStart}
+                >Vamos começar!
+                </Text>
+              </Pressable>
             </View>
             </Animated.View>
         </View>
