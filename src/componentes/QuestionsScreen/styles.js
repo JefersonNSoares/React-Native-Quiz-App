@@ -28,6 +28,13 @@ export default StyleSheet.create({
     backgroundColor: '#555552',
     borderRadius: 12,
   },
+  alternativeButton3:{
+    paddingVertical: 12,
+    paddingHorizontal: 12,
+    marginVertical: 6,
+    backgroundColor: '#ff0000',
+    borderRadius: 12,
+  },
   options: {
     marginVertical: 16,
     flex:1,
