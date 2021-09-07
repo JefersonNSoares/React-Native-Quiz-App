@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, Alert, Pressable, TouchableOpacity } from 'react-native';
-import Alternatives from '../Alternative/Alternative';
+import React, { useState } from 'react';
+import { View, Text, Alert,TouchableOpacity } from 'react-native';
 import FootnoteButton from '../Button/FootnoteButton/FootnoteButton';
 import { TopQuestion } from '../TopQuestion/TopQuestion';
 import { numRandom } from './numRandom';
