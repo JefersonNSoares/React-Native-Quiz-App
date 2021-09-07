@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Pergunta_a_amigos",
-    "slug": "pergunta_a_amigos",
+    "name": "Pergunta à amigos",
+    "slug": "pergunta à amigos",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,13 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jeferson.perguntaamigos"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.jeferson.perguntaamigos"
     },
     "web": {
       "favicon": "./assets/favicon.png"
