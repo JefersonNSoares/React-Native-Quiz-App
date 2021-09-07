@@ -2,9 +2,6 @@ import React from 'react';
 import {Text, View, TouchableOpacity, Image} from 'react-native';
 import styles from './styles';
 
-
-
-
 const FootnoteButton = ({ navigation, onpressNext, onPressComeBack }) => {
   return (
     <View style={styles.bottom}>

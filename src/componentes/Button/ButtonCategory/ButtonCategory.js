@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Pressable, Text, Dimensions} from 'react-native';
 import style from './style';
-const {height, width} = Dimensions.get('window');
 
 export const CategoryBox= ({ navigation ,category }) => (
   <View style={style.boxButton}>
