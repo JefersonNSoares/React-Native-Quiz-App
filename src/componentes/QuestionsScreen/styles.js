@@ -18,14 +18,17 @@ export default StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 12,
     marginVertical: 6,
-    backgroundColor: '#1A759F',
+    backgroundColor: '#292250',
     borderRadius: 12,
+    borderWidth: 1,
+    borderColor: 'black',
+
   },
   alternativeButton2:{
     paddingVertical: 12,
     paddingHorizontal: 12,
     marginVertical: 6,
-    backgroundColor: '#555552',
+    backgroundColor: '#0000FF',
     borderRadius: 12,
   },
   alternativeButton3:{

@@ -23,7 +23,7 @@ export default function QuestionScreen({ navigation, route }){
   
   const onPressNext = () => {
     if (next + 1 === totalQuestions) {
-      Alert.alert("Não temos mais questões para você");
+      Alert.alert("Ahhh, parece que você já respondeu todas as perguntas :(");
       setStyleButtom(styles.alternativeButton)
       setStyleButtom1(styles.alternativeButton)
       setStyleButtom2(styles.alternativeButton)
@@ -89,12 +89,7 @@ export default function QuestionScreen({ navigation, route }){
 
   return (
   <View style={styles.container}>
-    <View style={styles.textTop}>
-      <Text>Numero da questão: {next}</Text>
-      <Text>Quantidade de questões: {totalQuestions - 1}</Text>
-    </View>
         <TopQuestion question={question}/>
-
         <TouchableOpacity 
         style={styleButtom}
         onPress={()=> onPressCheckAnswer(

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, TouchableOpacity, Button} from 'react-native';
+import {Text, View, TouchableOpacity, Image} from 'react-native';
 import styles from './styles';
 
 
@@ -9,18 +9,18 @@ const FootnoteButton = ({ navigation, onpressNext, onPressComeBack }) => {
   return (
     <View style={styles.bottom}>
       <TouchableOpacity 
-      style={styles.button}
+      style={styles.buttonVoltar}
       onPress={onPressComeBack}>
         <Text style={styles.buttonText}> Voltar </Text>
       </TouchableOpacity>
       <TouchableOpacity 
-      style={styles.button}
+      style={styles.buttonProximo}
       onPress={onpressNext}
       >
-        <Text style={styles.buttonText}> Proxima </Text>
+        <Text style={styles.buttonText}> Proximo </Text>
       </TouchableOpacity>
       <TouchableOpacity 
-      style={styles.button}
+      style={styles.buttonFinalizar}
       onPress={() => navigation.navigate('Welcome')}
       >
         <Text style={styles.buttonText}> Finalizar </Text>

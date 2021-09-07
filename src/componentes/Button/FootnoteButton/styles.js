@@ -7,8 +7,22 @@ export default StyleSheet.create({
    justifyContent: 'space-between',
    flexDirection: 'row',
   },
-  button:{
-    backgroundColor:'#1A759F',
+  buttonVoltar:{
+    backgroundColor:'#FFD55A',
+    padding: 12,
+    borderRadius: 16,
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+  buttonProximo:{
+    backgroundColor:'#6DD47E',
+    padding: 12,
+    borderRadius: 16,
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+  buttonFinalizar:{
+    backgroundColor:'#2255',
     padding: 12,
     borderRadius: 16,
     alignItems: 'center',
