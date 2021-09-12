@@ -4,21 +4,17 @@ export default StyleSheet.create({
   container: {
     padding: 5,
     paddingHorizontal: 20,
-    height: '100%',
   },
   textTop: {
     fontSize: 5,
     justifyContent: 'space-between',
     flexDirection: 'row',
   },
-  buttonStart: {
-    
-  },
   alternativeButton:{
     paddingVertical: 12,
     paddingHorizontal: 12,
     marginVertical: 6,
-    backgroundColor: '#292250',
+    backgroundColor: '#292251',
     borderRadius: 12,
     borderWidth: 1,
     borderColor: 'black',

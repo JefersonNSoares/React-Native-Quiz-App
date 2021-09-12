@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {Alert, Pressable, Text, View, FlatList, SectionList, ActivityIndicator, SafeAreaView, Button} from 'react-native';
+import React from 'react';
+import {Pressable, Text, View, FlatList, ScrollView} from 'react-native';
 import style from './style';
 import jsonData from '../Api/JsonApi';
 
@@ -20,13 +20,15 @@ export default function QuestionsCategories({ navigation }){
     onPress={() =>
       navigation.navigate('QuestionsScreen', { id: id, name: category, base: base })}
     >
-        <Text style={style.buttonText}>{category}</Text>
+        <Text 
+        allowFontScaling={false}
+        style={style.buttonText}>{category}</Text>
       </Pressable>
     </View>
   );
 
-
-  return <View style={style.container}>
+  return ( 
+  <ScrollView style={style.container}>
     <FlatList
       data={data}
       keyExtractor={(item, index) => index.toString()}
@@ -38,5 +40,6 @@ export default function QuestionsCategories({ navigation }){
       />
     }
     />
-  </View>
+  </ScrollView>
+  )
 }

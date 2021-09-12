@@ -1,6 +1,7 @@
 import React from 'react';
-import {Text, View, TouchableOpacity, Image} from 'react-native';
+import {View, TouchableOpacity} from 'react-native';
 import styles from './styles';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 const FootnoteButton = ({ navigation, onpressNext, onPressComeBack }) => {
   return (
@@ -8,19 +9,19 @@ const FootnoteButton = ({ navigation, onpressNext, onPressComeBack }) => {
       <TouchableOpacity 
       style={styles.buttonVoltar}
       onPress={onPressComeBack}>
-        <Text style={styles.buttonText}> Voltar </Text>
+        <Icon name="fastbackward" size={50} color="#FFD55A" />
       </TouchableOpacity>
       <TouchableOpacity 
       style={styles.buttonProximo}
       onPress={onpressNext}
       >
-        <Text style={styles.buttonText}> Proximo </Text>
+        <Icon name="fastforward" size={50} color="#6DD47E" />
       </TouchableOpacity>
       <TouchableOpacity 
       style={styles.buttonFinalizar}
       onPress={() => navigation.navigate('Welcome')}
       >
-        <Text style={styles.buttonText}> Finalizar </Text>
+        <Icon name="closecircle" size={50} color="#FF6347" />
       </TouchableOpacity>
   </View>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Alert,TouchableOpacity } from 'react-native';
+import {Text, Alert,TouchableOpacity, ScrollView } from 'react-native';
 import FootnoteButton from '../Button/FootnoteButton/FootnoteButton';
 import { TopQuestion } from '../TopQuestion/TopQuestion';
 import { numRandom } from './numRandom';
@@ -87,7 +87,7 @@ export default function QuestionScreen({ navigation, route }){
   }
 
   return (
-  <View style={styles.container}>
+  <ScrollView style={styles.container}>
         <TopQuestion question={question}/>
         <TouchableOpacity 
         style={styleButtom}
@@ -96,7 +96,9 @@ export default function QuestionScreen({ navigation, route }){
           alternativeMarked = alternatives[listNumRandom[0]-1],
           alternativeCorrect = alternaCorrect
         )}        >
-            <Text style={styles.alternativeText}> {alternatives[listNumRandom[0]-1]} </Text>
+            <Text 
+            allowFontScaling={false}
+            style={styles.alternativeText}> {alternatives[listNumRandom[0]-1]} </Text>
         </TouchableOpacity>
 
         <TouchableOpacity 
@@ -106,7 +108,9 @@ export default function QuestionScreen({ navigation, route }){
           alternativeMarked = alternatives[listNumRandom[1]-1],
           alternativeCorrect = alternaCorrect
         )}        >
-            <Text style={styles.alternativeText}> {alternatives[listNumRandom[1]-1]} </Text>
+            <Text 
+            allowFontScaling={false}
+            style={styles.alternativeText}> {alternatives[listNumRandom[1]-1]} </Text>
         </TouchableOpacity>
 
         <TouchableOpacity 
@@ -116,7 +120,9 @@ export default function QuestionScreen({ navigation, route }){
           alternativeMarked = alternatives[listNumRandom[2]-1],
           alternativeCorrect = alternaCorrect
         )}        >
-            <Text style={styles.alternativeText}> {alternatives[listNumRandom[2]-1]} </Text>
+            <Text 
+            allowFontScaling={false}
+            style={styles.alternativeText}> {alternatives[listNumRandom[2]-1]} </Text>
         </TouchableOpacity>
 
         <TouchableOpacity 
@@ -126,7 +132,9 @@ export default function QuestionScreen({ navigation, route }){
           alternativeMarked = alternatives[listNumRandom[3]-1],
           alternativeCorrect = alternaCorrect
         )}        >
-            <Text style={styles.alternativeText}> {alternatives[listNumRandom[3]-1]} </Text>
+            <Text 
+            allowFontScaling={false}
+            style={styles.alternativeText}> {alternatives[listNumRandom[3]-1]} </Text>
         </TouchableOpacity>
 
         <FootnoteButton 
@@ -134,6 +142,6 @@ export default function QuestionScreen({ navigation, route }){
         onpressNext={onPressNext}
         onPressComeBack={onPressComeBack}
         />
-  </View>
+  </ScrollView>
   );
 };

@@ -21,37 +21,16 @@ export default function Welcome({ navigation }){
               alignSelf: 'center',
               top: 0.45 * height,
             }}>
-              <Text style={style.textTitle}>Pergunta à Amigos</Text>
-              </Animated.View>
-            <Animated.View style={{
-              backgroundColor: '#6DD47E',
-              height: height * 0.35,
-              width: width,
-              position: "absolute",
-              bottom: 0,
-              alignSelf: "center",
-              padding: 20,
-            }}>
-            <Text style={style.textSubTitle}>Junte os amigos e se preparem para as perguntas!</Text>
-            <View style={style.box4}>
-              <Pressable 
-              style={({ pressed }) => [
-                {
-                  backgroundColor: pressed
-                    ? 'white'
-                    : '#FFD55A',
-                },
-                style.buttonStart,
-              ]}
-              onPress={() =>
-                navigation.navigate('QuestionsCategories')}
-              >
-                <Text style={style.textButtonStart}
-                >Vamos começar!
-                </Text>
-              </Pressable>
-            </View>
+              <Text 
+              allowFontScaling={false}
+              style={style.textTitle}>Pergunta à Amigos</Text>
             </Animated.View>
+            <Text 
+            allowFontScaling={false}
+            style={style.textSubTitle}>Junte os amigos e se preparem para as perguntas!</Text>
+            <View style={style.box4}>
+              <StartButton navigation={navigation}/>
+            </View>
         </View>
 }
 

@@ -6,14 +6,16 @@ export default StyleSheet.create({
   textTitle:{
     color: '#293250',
     fontWeight: 'bold',
-    fontSize: 30,
+    fontSize: 25,
     textAlign: 'center',
-    padding: 40,
+    marginTop: 25,
   },
   textSubTitle:{
     color: '#293250',
     textAlign: 'center',
     fontSize: 22,
+    marginTop: 25,
+    marginHorizontal: 10,
   },
   container: {
     flex: 1,
@@ -31,25 +33,8 @@ export default StyleSheet.create({
     borderTopRightRadius: 50,
   },
   box4: {
-    marginVertical: 40,
-    borderRadius: 8,
-    padding: 6
-  },
-  textButtonStart: {
-    fontSize: 16,
-    lineHeight: 21,
-    fontWeight: 'bold',
-    letterSpacing: 0.25,
-    color: '#293250',
-  },
-  buttonStart: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 50,
-    elevation: 5,
-    borderWidth: StyleSheet.hairlineWidth,
+    marginTop: 25,
+    marginHorizontal: 15,
   },
   image: {
     width: width*1,

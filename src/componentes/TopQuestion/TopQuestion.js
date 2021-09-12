@@ -5,7 +5,9 @@ import styles from './styles';
 export const TopQuestion = ( props ) => {
   return(
     <View style={styles.top}>
-      <Text style={styles.question}> { props.question } </Text>
+      <Text 
+      allowFontScaling={false}
+      style={styles.question}> { props.question } </Text>
     </View>
   );
 }

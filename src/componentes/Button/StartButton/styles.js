@@ -1,17 +1,13 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  container: {
-    marginVertical: 40,
-    borderRadius: 8,
-    padding: 6
-  },
   textButtonStart: {
-    fontSize: 16,
+    fontSize: 19,
     lineHeight: 21,
     fontWeight: 'bold',
     letterSpacing: 0.25,
     color: '#293250',
+    padding: 10,
   },
   buttonStart: {
     alignItems: 'center',

@@ -1,37 +1,34 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const {height, width} = Dimensions.get('window');
 
 export default StyleSheet.create({
   bottom: {
-   marginBottom: 12,
-   paddingVertical: 16,
-   justifyContent: 'space-between',
    flexDirection: 'row',
+   width: width*0.9,
   },
   buttonVoltar:{
-    backgroundColor:'#FFD55A',
-    padding: 12,
+    flex: 1,
     borderRadius: 16,
     alignItems: 'center',
-    marginBottom: 30,
+    margin: 9,
   },
   buttonProximo:{
-    backgroundColor:'#6DD47E',
-    padding: 12,
+    flex: 1,
     borderRadius: 16,
     alignItems: 'center',
-    marginBottom: 30,
+    margin: 9,
   },
   buttonFinalizar:{
-    backgroundColor:'#2255',
-    padding: 12,
+    flex: 1,
     borderRadius: 16,
     alignItems: 'center',
-    marginBottom: 30,
+    margin: 9,
   },
   buttonText:{
-    fontSize: 18,
-    fontWeight: '600',
+    fontSize: 16,
     color: 'white',
+    padding: 16,
   },
 });
 

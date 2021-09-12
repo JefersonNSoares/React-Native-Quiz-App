@@ -9,11 +9,13 @@ export default StyleSheet.create({
   },
   boxButton: {
     paddingTop:15,
+    marginHorizontal: 10,
   },
   buttonText: {
     fontSize: 25,
     fontWeight: 'bold',
     color: '#293250',
+    padding: 8,
   },
   button: {
     alignItems: 'center',

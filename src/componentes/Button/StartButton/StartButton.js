@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Pressable, Text} from 'react-native';
 import styles from './styles';
 
-export const StartButton = ({ navigation}) => {
+export const StartButton = ({ navigation }) => {
   return (
     <View style={styles.container}>
     <Pressable 
