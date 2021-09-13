@@ -3,7 +3,7 @@ import {View, TouchableOpacity} from 'react-native';
 import styles from './styles';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-const FootnoteButton = ({ navigation, onpressNext, onPressComeBack }) => {
+const FootnoteButton = ({ onpressNext, onPressComeBack, onPressFinalizar }) => {
   return (
     <View style={styles.bottom}>
       <TouchableOpacity 
@@ -19,7 +19,8 @@ const FootnoteButton = ({ navigation, onpressNext, onPressComeBack }) => {
       </TouchableOpacity>
       <TouchableOpacity 
       style={styles.buttonFinalizar}
-      onPress={() => navigation.navigate('Welcome')}
+      // onPress={() => navigation.navigate('Welcome')}
+      onPress={onPressFinalizar}
       >
         <Icon name="closecircle" size={50} color="#FF6347" />
       </TouchableOpacity>

@@ -18,18 +18,24 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.jefersonDev.perguntaamigos"
+      "bundleIdentifier": "com.jeferson.perguntaamigos"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.jefersonDev.perguntaamigos",
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-3596698269995820~1790525674"
+      },
+      "package": "com.jeferson.perguntaamigos",
       "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-ads-admob"
+    ]
   }
 }

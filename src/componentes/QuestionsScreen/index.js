@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {Text, Alert,TouchableOpacity, ScrollView } from 'react-native';
 import FootnoteButton from '../Button/FootnoteButton/FootnoteButton';
 import { TopQuestion } from '../TopQuestion/TopQuestion';
 import { numRandom } from './numRandom';
 import styles from './styles';
+import { AdMobInterstitial } from 'expo-ads-admob';
+
+function Ad(){
+  useEffect (() => {
+    async function LoadAdmob() {
+      await AdMobInterstitial.setAdUnitID('ca-app-pub-3596698269995820/3595875016');
+      AdMob();
+    }
+    LoadAdmob();
+  }, [])
+}
+  
+async function AdMob () {
+  await AdMobInterstitial.requestAdAsync({ servePersonalizedAds: true});
+  await AdMobInterstitial.showAdAsync();
+}
 
 export default function QuestionScreen({ navigation, route }){
   const [next, setNext] = useState(0)
@@ -86,6 +102,10 @@ export default function QuestionScreen({ navigation, route }){
     }
   }
 
+  const onPressFinalizar = () => {
+    navigation.navigate('Welcome');
+    // AdMob();
+  }
   return (
   <ScrollView style={styles.container}>
         <TopQuestion question={question}/>
@@ -141,6 +161,7 @@ export default function QuestionScreen({ navigation, route }){
         navigation={navigation}
         onpressNext={onPressNext}
         onPressComeBack={onPressComeBack}
+        onPressFinalizar={onPressFinalizar}
         />
   </ScrollView>
   );

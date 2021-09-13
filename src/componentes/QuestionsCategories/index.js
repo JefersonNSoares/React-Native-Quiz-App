@@ -28,8 +28,8 @@ export default function QuestionsCategories({ navigation }){
   );
 
   return ( 
-  <ScrollView style={style.container}>
     <FlatList
+      style={style.container}
       data={data}
       keyExtractor={(item, index) => index.toString()}
       renderItem={({item})=>
@@ -40,6 +40,5 @@ export default function QuestionsCategories({ navigation }){
       />
     }
     />
-  </ScrollView>
   )
 }
