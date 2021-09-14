@@ -2,7 +2,7 @@
   "expo": {
     "name": "Pergunta à amigos",
     "slug": "pergunta-a-amigos",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -29,7 +29,7 @@
         "googleMobileAdsAppId": "ca-app-pub-3596698269995820~1790525674"
       },
       "package": "com.jeferson.perguntaamigos",
-      "versionCode": 1
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png"
