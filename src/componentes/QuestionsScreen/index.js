@@ -6,22 +6,6 @@ import { numRandom } from './numRandom';
 import styles from './styles';
 import { AdMobInterstitial } from 'expo-ads-admob';
 
-// function Ad () {
-//   useEffect (() => {
-//     async function LoadAdmob() {
-//       await AdMobInterstitial.setAdUnitID('ca-app-pub-3940256099942544/1033173712');
-//       AdMob();
-//     }
-//     LoadAdmob();
-//   }, [])
-// }
-  
-// async function AdMob () {
-//   // await AdMobInterstitial.setAdUnitID('ca-app-pub-3940256099942544/1033173712');
-//   await AdMobInterstitial.requestAdAsync({ servePersonalizedAds: true});
-//   await AdMobInterstitial.showAdAsync();
-// }
-
 export default function QuestionScreen({ navigation, route }){
   const [next, setNext] = useState(0)
   const [styleButtom, setStyleButtom] = useState(styles.alternativeButton);
