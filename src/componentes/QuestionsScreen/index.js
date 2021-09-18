@@ -6,20 +6,21 @@ import { numRandom } from './numRandom';
 import styles from './styles';
 import { AdMobInterstitial } from 'expo-ads-admob';
 
-function Ad(){
-  useEffect (() => {
-    async function LoadAdmob() {
-      await AdMobInterstitial.setAdUnitID('ca-app-pub-3596698269995820/3595875016');
-      AdMob();
-    }
-    LoadAdmob();
-  }, [])
-}
+// function Ad () {
+//   useEffect (() => {
+//     async function LoadAdmob() {
+//       await AdMobInterstitial.setAdUnitID('ca-app-pub-3940256099942544/1033173712');
+//       AdMob();
+//     }
+//     LoadAdmob();
+//   }, [])
+// }
   
-async function AdMob () {
-  await AdMobInterstitial.requestAdAsync({ servePersonalizedAds: true});
-  await AdMobInterstitial.showAdAsync();
-}
+// async function AdMob () {
+//   // await AdMobInterstitial.setAdUnitID('ca-app-pub-3940256099942544/1033173712');
+//   await AdMobInterstitial.requestAdAsync({ servePersonalizedAds: true});
+//   await AdMobInterstitial.showAdAsync();
+// }
 
 export default function QuestionScreen({ navigation, route }){
   const [next, setNext] = useState(0)
@@ -36,6 +37,21 @@ export default function QuestionScreen({ navigation, route }){
   const alternatives = data[numCategory].questions[next].incorrect_answers
   const alternaCorrect = data[numCategory].questions[next].correct_answer
   
+  function Ad () {
+    useEffect (() => {
+      async function LoadAdmob() {
+        await AdMobInterstitial.setAdUnitID('ca-app-pub-3940256099942544/1033173712');
+        AdMob();
+      }
+      LoadAdmob();
+    }, [])
+  }
+    
+  async function AdMob () {
+    await AdMobInterstitial.requestAdAsync({ servePersonalizedAds: true});
+    await AdMobInterstitial.showAdAsync();
+  }
+
   const onPressNext = () => {
     if (next + 1 === totalQuestions) {
       Alert.alert("Ahhh, parece que você já respondeu todas as perguntas :(");
@@ -104,8 +120,9 @@ export default function QuestionScreen({ navigation, route }){
 
   const onPressFinalizar = () => {
     navigation.navigate('Welcome');
-    // AdMob();
+    AdMob();
   }
+  
   return (
   <ScrollView style={styles.container}>
         <TopQuestion question={question}/>
