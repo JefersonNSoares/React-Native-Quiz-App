@@ -1,7 +1,7 @@
 import React from 'react';
 import {Pressable, Text, View, FlatList, ScrollView} from 'react-native';
 import style from './style';
-import jsonData from '../Api/JsonApi';
+import jsonData from '../../componentes/Api/JsonApi';
 
 
 export default function QuestionsCategories({ navigation }){

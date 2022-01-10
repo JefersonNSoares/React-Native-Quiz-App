@@ -2,7 +2,7 @@
   "expo": {
     "name": "Pergunta à amigos",
     "slug": "pergunta-a-amigos",
-    "version": "1.0.3",
+    "version": "1.5",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -18,17 +18,23 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.jeferson.perguntaamigos"
+      "bundleIdentifier": "com.nextstep.perguntaamigos",
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-3940256099942544~1458002511" 
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#FFFFFF",
+        "config": {
+          "googleMobileAdsAppId": "ca-app-pub-3940256099942544~3347511713"
+        }
       },
       "config": {
-        "googleMobileAdsAppId": "ca-app-pub-3940256099942544~3347511713"
+        "googleMobileAdsAppId": "ca-app-pub-3940256099942544~1458002511"
       },
-      "package": "com.jeferson.perguntaamigos",
+      "package": "com.nextstep.perguntaamigos",
       "versionCode": 3
     },
     "web": {

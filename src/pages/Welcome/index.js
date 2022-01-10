@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, Pressable, View, Animated, Dimensions, Image } from 'react-native';
-import { StartButton } from '../Button/StartButton/StartButton';
+import { Text, View, Animated, Dimensions, Image } from 'react-native';
+import { StartButton } from '../../componentes/Button/StartButton/StartButton';
 import style from './style';
 
 const {height, width} = Dimensions.get('window');
@@ -19,7 +19,7 @@ export default function Welcome({ navigation }){
               borderRadius: 1000,
               position: 'absolute',
               alignSelf: 'center',
-              top: 0.45 * height,
+              top: 0.37 * height,
             }}>
               <Text 
               allowFontScaling={false}

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import {Text, Alert,TouchableOpacity, ScrollView } from 'react-native';
-import FootnoteButton from '../Button/FootnoteButton/FootnoteButton';
-import { TopQuestion } from '../TopQuestion/TopQuestion';
+import FootnoteButton from '../../componentes/Button/FootnoteButton/FootnoteButton';
+import { TopQuestion } from '../../componentes/TopQuestion/TopQuestion';
 import { numRandom } from './numRandom';
 import styles from './styles';
-import { AdMobInterstitial } from 'expo-ads-admob';
 
 export default function QuestionScreen({ navigation, route }){
   const [next, setNext] = useState(0)
@@ -21,20 +20,6 @@ export default function QuestionScreen({ navigation, route }){
   const alternatives = data[numCategory].questions[next].incorrect_answers
   const alternaCorrect = data[numCategory].questions[next].correct_answer
   
-  function Ad () {
-    useEffect (() => {
-      async function LoadAdmob() {
-        await AdMobInterstitial.setAdUnitID('ca-app-pub-3940256099942544/1033173712');
-        AdMob();
-      }
-      LoadAdmob();
-    }, [])
-  }
-    
-  async function AdMob () {
-    await AdMobInterstitial.requestAdAsync({ servePersonalizedAds: true});
-    await AdMobInterstitial.showAdAsync();
-  }
 
   const onPressNext = () => {
     if (next + 1 === totalQuestions) {
@@ -104,7 +89,6 @@ export default function QuestionScreen({ navigation, route }){
 
   const onPressFinalizar = () => {
     navigation.navigate('Welcome');
-    AdMob();
   }
   
   return (

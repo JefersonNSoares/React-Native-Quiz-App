@@ -8,7 +8,7 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25,
     textAlign: 'center',
-    marginTop: 25,
+    marginTop: 25
   },
   textSubTitle:{
     color: '#293250',
